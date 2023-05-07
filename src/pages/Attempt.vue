@@ -40,7 +40,7 @@ const listVirtualTourSrc = ref([
 		</p>
 
 
-		<h2 class="display-5 my-5">
+		<h2 class="display-5 mt-5">
 			Virtual tour
 		</h2>
 
@@ -53,9 +53,18 @@ const listVirtualTourSrc = ref([
 						 style="height: 600px;">
 					<VirtualTour :src="src" />
 				</div>
-				<small class="text-center d-block mt-2">Contoh virtual tour</small>
-
 			</div>
+
+			<h2 class="display-5 mt-5">
+				Marzipano virtual tour
+			</h2>
+
+			<!-- vt gede 2 -->
+			<div style="height: 600px;"
+					 class="">
+				<VirtualTour src="https://quiet-centaur-39e815.netlify.app/" />
+			</div>
+
 		</div>
 
 	</div>

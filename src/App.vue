@@ -4,7 +4,7 @@ import Footer from './components/Footer.vue';
 import Virt360 from './pages/Virt360.vue';
 import Marzipano from './pages/Marzipano.vue';
 import Attempt from './pages/Attempt.vue';
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import { computed } from '@vue/reactivity';
 
 
@@ -23,11 +23,15 @@ const pageNames = computed(() => {
 	return nameList;
 });
 
-const selectedPage = ref('attempt');
+const selectedPage = ref('v360');
 
 function changePage(to) {
 	selectedPage.value = to;
 }
+
+watch(selectedPage, (newVal) => {
+	document.title = `VT | ${newVal}`;
+})
 
 </script>
 
