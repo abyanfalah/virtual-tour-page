@@ -1,3 +1,7 @@
 <script setup></script>
 
-<template></template>
+<template>
+	<div>
+		<p class="text-danger">asfd</p>
+	</div>
+</template>
