@@ -11,7 +11,7 @@ import { computed } from '@vue/reactivity';
 const pages = {
 	v360: Virt360,
 	marzipano: Marzipano,
-	attempt: Attempt,
+	cobaan: Attempt,
 };
 
 const pageNames = computed(() => {

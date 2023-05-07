@@ -1,23 +1,15 @@
 <script setup>
-import { getCurrentInstance } from 'vue';
-
+import { getCurrentInstance, ref } from 'vue';
+import VirtualTour from '../components/VirtualTour.vue';
+VirtualTour;
 
 const componentName = getCurrentInstance()?.type.__name;
-
+const virtualTourSrc = ref('https://quiet-centaur-39e815.netlify.app/');
 </script>
 
 <template>
 	<!-- <h1>Virtual tour make "{{ componentName }}"</h1> -->
-
-	<iframe class="rounded"
-					height="100%"
-					width="100%"
-					allowfullscreen=""
-					frameborder="0"
-					src="https://quiet-centaur-39e815.netlify.app/"
-					allowcontrols="true"
-					allowsceneselector="true"
-					allowaudio="true"></iframe>
+	<VirtualTour :src="virtualTourSrc" />
 </template>
 
 <style scoped>

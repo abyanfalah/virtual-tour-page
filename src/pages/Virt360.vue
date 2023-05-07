@@ -1,25 +1,16 @@
 <script setup>
-import { getCurrentInstance } from 'vue';
-
+import { getCurrentInstance, ref } from 'vue';
+import VirtualTour from '../components/VirtualTour.vue';
+VirtualTour;
 
 const componentName = getCurrentInstance()?.type.__name;
-
+const virtualTourSrc = ref('https://virtualtoureasy.com/tour/viewer/index.php?v=UKsy7lPFd8HYr415NOTq');
 </script>
 
 <template>
 	<!-- <h1>Virtual tour make "{{ componentName }}"</h1> -->
-
-	<iframe class="rounded"
-					height="100%"
-					width="100%"
-					allowfullscreen=""
-					frameborder="0"
-					src="https://virtualtoureasy.com/tour/viewer/index.php?v=UKsy7lPFd8HYr415NOTq"
-					allowcontrols="true"
-					allowsceneselector="true"
-					allowaudio="true"></iframe>
+	<VirtualTour :src="virtualTourSrc" />
 </template>
-
 <style scoped>
 .full {
 	min-height: 100%;
@@ -32,3 +23,4 @@ const componentName = getCurrentInstance()?.type.__name;
 	background-color: red;
 }
 </style>
+
