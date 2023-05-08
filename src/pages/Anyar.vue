@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-	anyar
+	anyar ti urang
 </template>
